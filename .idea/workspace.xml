@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ca8ac31-102b-42d5-b914-111896f292b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/javascript/chap4/phraseomatic/phrase-o-matic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/javascript/chap4/bubble-report/bubble-report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,11 +36,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phrase-o-matic.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="phrase-o-matic.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/javascript/chap4/phraseomatic/phrase-o-matic.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bubble-report.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/javascript/chap4/bubble-report/bubble-report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -78,6 +88,7 @@
         <option value="$PROJECT_DIR$/src/main/javascript/chap2/battleship.html" />
         <option value="$PROJECT_DIR$/src/main/javascript/chap2/battleship.js" />
         <option value="$PROJECT_DIR$/src/main/javascript/chap4/phraseomatic/phrase-o-matic.html" />
+        <option value="$PROJECT_DIR$/src/main/javascript/chap4/bubble-report/bubble-report.html" />
       </list>
     </option>
   </component>
@@ -176,6 +187,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="chap4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stevecode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="headstart-javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="chap4" type="462c0819:PsiDirectoryNode" />
+              <item name="bubble-report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stevecode" type="b2602c69:ProjectViewProjectNode" />
@@ -319,12 +339,12 @@
       <option name="presentableId" value="Default" />
       <updated>1513296863365</updated>
       <workItem from="1513296864689" duration="3625000" />
-      <workItem from="1513436906948" duration="774000" />
+      <workItem from="1513436906948" duration="3829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4931000" />
+    <option name="totallyTimeSpent" value="7986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -442,6 +462,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/javascript/chap4/bubble-report/bubble-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
           <folding />
         </state>
       </provider>
