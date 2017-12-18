@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prequal car</title>
+
+    <script>
+        var taxi = {
+          make: "webville motors",
+          model: "taxi",
+          year: 1955,
+          color: "yellow",
+          passengers: 4,
+          convirtable: false,
+          mileage: 281341
+        };
+
+        function prequalCar(car) {
+
+          if (car.mileage > 10000){
+            return false;
+          }else if (car.year > 1960) {
+            return false;
+          }
+            return true;
+        }
+
+        var worthALook = prequalCar(taxi);
+
+        if (worthALook ) {
+          console.log("You should look at this " + taxi.make + " " + taxi.model);
+        } else {
+          console.log("You should pass on this " + taxi.make + " " + taxi.model);
+        }
+    </script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>
