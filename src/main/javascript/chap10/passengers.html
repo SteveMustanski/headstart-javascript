@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger check</title>
+    <script>
+      var passengers = [{name: "Jane Doloop", paid: true},
+        {name: "Dr. Evel", paid: true},
+        {name: "Sue Property", paid: false},
+        {name: "John Funcal", paid: true}
+      ];
+      
+      function checkNoFlyList(passenger) {
+        return (passenger.name === "Dr. Evel");
+        }
+        
+      function checkNotPaid(passenger) {
+        return (!passenger.paid);
+      }  
+      
+      function processPassengers(passengers, testFunction) {
+        for (var i = 0; i < passengers.length; i++) {
+          if (testFunction(passengers[i])) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function printPassengers(passenger) {
+        console.log("Passenger Name: " + passenger.name + " Paid: " + passenger.paid);
+
+      }
+
+      processPassengers(passengers, printPassengers);
+
+      var allCanFly = processPassengers(passengers, checkNoFlyList);
+      if (!allCanFly) {
+        console.log("The plane can't take off!  We have a passenger on the do not fly list!");
+      }
+
+      var allPaid = processPassengers(passengers, checkNotPaid);
+      if (!allPaid) {
+        console.log("The plan can't take off! Not all passengers have paid.");
+      }
+      
+    </script>
+</head>
+<body>
+
+</body>
+</html>
