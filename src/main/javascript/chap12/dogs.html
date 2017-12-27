@@ -9,6 +9,13 @@
           this.name = name;
           this.breed = breed;
           this.weight = weight;
+          this.bark = function() {
+            if (this.weight > 10) {
+              alert(this.name + " says Woof!");
+            } else {
+              alert(this.name + " says Yip!");
+            }
+          }
         }
 
         var fido = new Dog("Fido", "mixed", 38);
@@ -23,6 +30,10 @@
           }
 
           console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+        }
+
+        for (var i = 0; i < dogs.length; i++) {
+          dogs[i].bark();
         }
 
     </script>
