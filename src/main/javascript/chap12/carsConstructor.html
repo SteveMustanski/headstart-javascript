@@ -6,15 +6,15 @@
 
     <script>
 
-        function Car(make, model, year, color, passengers, convertible, mileage, started) {
-          this.make = make;
-          this.model = model;
-          this.year = year;
-          this.color = color;
-          this.passengers = passengers;
-          this.convertible = convertible;
-          this.mileage = mileage;
-          this.started = started;
+        function Car(params) {
+          this.make = params.make;
+          this.model = params.model;
+          this.year = params.year;
+          this.color = params.color;
+          this.passengers = params.passengers;
+          this.convertible = params.convertible;
+          this.mileage = params.mileage;
+          this.started = false;
           this.start = function() {
             this.started= true;
             console.log(this.make + " " +this.model + " is started.");
@@ -33,11 +33,25 @@
 
         }
 
-        var chevy = new Car("Chevy", "Bel Air", 1957, "red", 2, false, 1021);
+        var chevyParams = {
+          make: "Chevy",
+          model: "Bel Air",
+          year: 1957,
+          color: "red",
+          convertible: false,
+          passengers: 2,
+          mileage: 1021
+        };
+
+        var chevy = new Car(chevyParams);
 
         chevy.start();
         chevy.drive();
         chevy.stop();
+
+        if (chevy instanceof Car) {
+          console.log("It is a car!");
+        }
 
     </script>
 </head>
