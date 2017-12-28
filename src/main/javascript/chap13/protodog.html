@@ -5,6 +5,7 @@
     <title>proto Dogs</title>
 
     <script>
+        // dog constructor
         function Dog(name, breed, weight) {
           this.name = name;
           this.breed = breed;
@@ -33,10 +34,48 @@
 
         };
 
+        //show dog constructor
+        function ShowDog(name, breed, weight, handler) {
+          this.name = name;
+          this.breed = breed;
+          this.weight = weight;
+          this.handler = handler;
+        }
+
+        // create the showdog prototype from the dog prototype
+
+        ShowDog.prototype = new Dog();
+
+        // add a property and methods to the showdog prototype
+
+        ShowDog.prototype.league = "Webville";
+
+        ShowDog.prototype.stack = function() {
+          console.log("Stack");
+        };
+
+        ShowDog.prototype.bait = function() {
+          console.log("bait");
+        };
+
+        ShowDog.prototype.gait = function(kind) {
+          console.log(kind + "ing");
+        };
+
+        ShowDog.prototype.groom = function() {
+          console.log("Groom");
+        };
+
+        // create some dogs
         var fido = new Dog("Fido", "mixed", 38);
         var fluffy = new Dog("Fluffy", "Poodle", 30);
         var spot = new Dog("Spot", "Chihuahua", 10);
 
+        //create a show dog
+
+        var scotty = new ShowDog("Scotty", "Terrier", 15, "Cookie");
+
+        // create a bark function unique to spot
         spot.bark = function() {
           alert(this.name + " says YIP YIP YIP");
         };
@@ -59,6 +98,11 @@
         fido.run();
         spot.wag();
         fluffy.sit();
+        scotty.stack();
+        scotty.bark();
+        scotty.gait("bound");
+        console.log(scotty.species);
+        console.log(scotty.handler);
 
     </script>
 </head>
