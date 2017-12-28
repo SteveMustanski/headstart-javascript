@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>proto Dogs</title>
+
+    <script>
+        // dog constructor
+        function Dog(name, breed, weight) {
+          this.name = name;
+          this.breed = breed;
+          this.weight = weight;
+        }
+
+        Dog.prototype.species = "Canine";
+        Dog.prototype.bark = function() {
+            if (this.weight > 10) {
+              alert(this.name + " says Woof!");
+            } else {
+              alert(this.name + " says Yip!");
+            }
+          };
+
+        Dog.prototype.run = function() {
+          console.log("Run!")
+        };
+
+        Dog.prototype.wag = function() {
+          console.log("Wag");
+        };
+
+        Dog.prototype.sit = function() {
+          console.log(this.name + " is now sitting.");
+
+        };
+
+        //show dog constructor
+        function ShowDog(name, breed, weight, handler) {
+          // call dog to set dog property so as to not duplicate code
+          Dog.call(this, name, breed, weight);
+          this.handler = handler;
+        }
+
+        // create the showdog prototype from the dog prototype
+
+        ShowDog.prototype = new Dog();
+
+        // best practice is to set the constructor property of a prototype that inherits from another
+        ShowDog.prototype.constructor = ShowDog;
+
+        // add a property and methods to the showdog prototype
+        ShowDog.prototype.league = "Webville";
+
+        ShowDog.prototype.stack = function() {
+          console.log("Stack");
+        };
+
+        ShowDog.prototype.bait = function() {
+          console.log("bait");
+        };
+
+        ShowDog.prototype.gait = function(kind) {
+          console.log(kind + "ing");
+        };
+
+        ShowDog.prototype.groom = function() {
+          console.log("Groom");
+        };
+
+        // create some dogs
+        var fido = new Dog("Fido", "mixed", 38);
+        var fluffy = new Dog("Fluffy", "Poodle", 30);
+        var spot = new Dog("Spot", "Chihuahua", 10);
+
+        //create a show dog
+
+        var scotty = new ShowDog("Scotty", "Terrier", 15, "Cookie");
+
+        // create a bark function unique to spot
+        spot.bark = function() {
+          alert(this.name + " says YIP YIP YIP");
+        };
+
+        var dogs = [fido, fluffy, spot];
+
+        for (var i = 0; i < dogs.length; i++) {
+          var size = "small";
+          if (dogs[i].weight > 10) {
+            size = "large";
+          }
+
+          console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+        }
+
+        for (var i = 0; i < dogs.length; i++) {
+          dogs[i].bark();
+        }
+
+        fido.run();
+        spot.wag();
+        fluffy.sit();
+        scotty.stack();
+        scotty.bark();
+        scotty.gait("bound");
+        console.log(scotty.species);
+        console.log(scotty.handler);
+
+        if (scotty instanceof Dog) {
+          console.log("Scotty is a dog");
+        }
+
+        if (scotty instanceof ShowDog) {
+          console.log("scotty is a showdog");
+        }
+
+        console.log("The scotty constructor is " + scotty.constructor);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
