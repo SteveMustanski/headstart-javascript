@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+
+    <script>
+
+        function Car(params) {
+          this.make = params.make;
+          this.model = params.model;
+          this.year = params.year;
+          this.color = params.color;
+          this.passengers = params.passengers;
+          this.convertible = params.convertible;
+          this.mileage = params.mileage;
+          this.started = false;
+          this.start = function() {
+            this.started= true;
+            console.log(this.make + " " +this.model + " is started.");
+          };
+          this.stop = function() {
+            this.started = false;
+            console.log(this.make + " " +this.model + " is stopped.");
+          };
+          this.drive = function() {
+            if (this.started == true) {
+              console.log(this.make + " " +this.model + " is driving!")
+            } else {
+              console.log("You need to start this " + this.make + " " + this.model + " first!");
+            }
+          }
+
+        }
+
+        var chevyParams = {
+          make: "Chevy",
+          model: "Bel Air",
+          year: 1957,
+          color: "red",
+          convertible: false,
+          passengers: 2,
+          mileage: 1021
+        };
+
+        var chevy = new Car(chevyParams);
+
+        chevy.start();
+        chevy.drive();
+        chevy.stop();
+
+        if (chevy instanceof Car) {
+          console.log("It is a car!");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
