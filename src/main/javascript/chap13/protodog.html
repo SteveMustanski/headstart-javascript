@@ -36,9 +36,8 @@
 
         //show dog constructor
         function ShowDog(name, breed, weight, handler) {
-          this.name = name;
-          this.breed = breed;
-          this.weight = weight;
+          // call dog to set dog property so as to not duplicate code
+          Dog.call(this, name, breed, weight);
           this.handler = handler;
         }
 
@@ -46,8 +45,10 @@
 
         ShowDog.prototype = new Dog();
 
-        // add a property and methods to the showdog prototype
+        // best practice is to set the constructor property of a prototype that inherits from another
+        ShowDog.prototype.constructor = ShowDog;
 
+        // add a property and methods to the showdog prototype
         ShowDog.prototype.league = "Webville";
 
         ShowDog.prototype.stack = function() {
@@ -103,6 +104,16 @@
         scotty.gait("bound");
         console.log(scotty.species);
         console.log(scotty.handler);
+
+        if (scotty instanceof Dog) {
+          console.log("Scotty is a dog");
+        }
+
+        if (scotty instanceof ShowDog) {
+          console.log("scotty is a showdog");
+        }
+
+        console.log("The scotty constructor is " + scotty.constructor);
 
     </script>
 </head>
