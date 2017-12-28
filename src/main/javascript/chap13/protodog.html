@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>proto Dogs</title>
+
+    <script>
+        function Dog(name, breed, weight) {
+          this.name = name;
+          this.breed = breed;
+          this.weight = weight;
+        }
+
+        Dog.prototype.species = "Canine";
+        Dog.prototype.bark = function() {
+            if (this.weight > 10) {
+              alert(this.name + " says Woof!");
+            } else {
+              alert(this.name + " says Yip!");
+            }
+          };
+
+        Dog.prototype.run = function() {
+          console.log("Run!")
+        };
+
+        Dog.prototype.wag = function() {
+          console.log("Wag");
+        };
+
+        var fido = new Dog("Fido", "mixed", 38);
+        var fluffy = new Dog("Fluffy", "Poodle", 30);
+        var spot = new Dog("Spot", "Chihuahua", 10);
+
+        spot.bark = function() {
+          alert(this.name + " says YIP YIP YIP");
+        };
+
+        var dogs = [fido, fluffy, spot];
+
+        for (var i = 0; i < dogs.length; i++) {
+          var size = "small";
+          if (dogs[i].weight > 10) {
+            size = "large";
+          }
+
+          console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+        }
+
+        for (var i = 0; i < dogs.length; i++) {
+          dogs[i].bark();
+        }
+
+        fido.run();
+        spot.wag();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
